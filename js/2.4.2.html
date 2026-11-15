@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Преобразователь величин</title>
+    </head>
+    <body>
+        <form>
+            <p>
+                <input id="inches">
+            </p>
+        </form>
+        <p id="millimeters"></p>
+        <p id="santimetrs"></p>
+        <p id="metrs"></p>
+        <script>
+            const format = {
+                style:'unit',
+                unit:'millimeter',
+                minimumFractionDigits:0,
+                maximumFractionDigits:0
+            };
+            const inches = document.getElementById('inches');
+            const millimeters = document.getElementById('millimeters');
+            const santimetrs=document.getElementById('сantimetrs');
+            const metrs=document.getElementById('meters');
+            function onInchesInput() {
+                const inchesS = this.value;
+                const inchesN = parseFloat(inchesS);
+            if (!Number.isNaN(inchesN)){
+                const mms = inchesN * 25.4;
+                const сms=mms/10;
+                const ms=mms/1000;
+                millimeters.textContent = mms.toLocaleString('ru-RU', format);
+                const cmFormat={...format, unit:'centimetr' };
+                сantimetrs.textContent=sms.toLocaleString('ru-RU', cmFormat);
+                const mFormat={...format, unit:'meter'};
+                meters.textContent=ms.toLocaleString('ru-RU', mFormat);
+            }   else{
+                millimeters.textContent=" ";
+                cantimetrs.textContent=" ";
+                meters.textContent=" ";
+            }
+            }
+            inches.addEventListener('input', onInchesInput);
+        </script>
+    </body>
+</html>

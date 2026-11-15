@@ -1,0 +1,32 @@
+video.addEventListener('canplay',()=>{
+    posH.style.width='0%';
+    play.style.backgroundImage='url(19.3/images/play.png)';
+    player.classList.add('active');
+});
+video.addEventListener('playing',()=>{
+    play.style.backgroundImage='url(19.3/images/pause.png)'
+    player.classList.remove('active');
+});
+video.addEventListener('pause',()=>{
+    play.style.backgroundImage='url(19.3/images/play.png)';
+    player.classList.remove('active');
+});
+video.addEventListener('timeupdate',()=>{
+    posH.style.width=video.currentTime/video.duration*100+'%';
+});
+video.addEventListener('ended',()=>{
+    video.load();
+});
+play.addEventListener('click',()=>{
+    if(video.paused)
+        video.play();
+    else
+        video.pause();
+});
+stop.addEventListener('click',()=>{
+    video.load();
+});
+position.addEventListener('click',evt=>{
+    video.currentTime=evt.offsetX/
+        position.clientWidth*video.duration;
+});

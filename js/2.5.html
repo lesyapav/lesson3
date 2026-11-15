@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Тригонометрия</title>
+    </head>
+    <body>
+        <form>
+            <p>
+                <input id="angle">
+            </p>
+        </form>
+        <p>Синус:<span id="sin"></span> </p>
+        <p>Косинус:<span id="cos"></span></p>
+        <p>Тангенс:<span id="tan"></span></p>
+        <script>
+            const angleInput=document.getElementById('angle'); 
+            const sinOutput=document.getElementById('sin');
+            const cosOutput=document.getElementById('cos');
+            const tanOutput=document.getElementById('tan');
+            function onangleInput( ) {
+                const angleS=parseFloat(this.value);
+                const angleD=angleS*(Math.PI)/180;
+                const sinVal=Math.sin(angleD);
+                const cosVal=Math.cos(angleD);
+                const tanVal=Math.tan(angleD);
+            sinOutput.textContent=sinVal;
+            cosOutput.textContent=cosVal;
+            tanOutput.textContent=tanVal;
+            }
+            angleInput.addEventListener('input', onangleInput);
+        </script>
+    </body>
+</html>
