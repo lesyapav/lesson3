@@ -1,0 +1,64 @@
+body { margin: 0; }
+header {
+    text-align: right;
+    margin-bottom: 40pt;
+    perspective: 1000px;
+}
+header h1 {
+    font: bold 64pt sans-serif;
+    background-color: #c0c0c074;
+    margin: 0;
+    padding: 8pt 20pt 0 0;
+    transform: rotateY(10deg) scaleX(0.9) skewX(-10deg) translateZ(-40px);
+}
+header h2 {
+    font: bold 48pt sans-serif;
+    background-color: #c0c0c0eb;
+    margin: 0;
+    padding: 0 30pt 0 0;
+    transform: rotateY(-20deg) scaleX(0.9) skewX(20deg) translateZ(40px);
+}
+footer {
+    text-align: right;
+    margin: 40pt 0 0 0;
+}
+footer p {
+    font: italic 18pt sans-serif;
+    background-color: #c0c0c074;
+    margin: 0;
+    padding: 16pt 20pt 16pt 0;
+}
+main {
+ display: flex;
+flex-wrap: wrap;
+ padding: 0 20pt;
+ gap: 10pt;
+container-type: inline-size;
+}
+main .photo {
+ width: calc((100% - 10pt * 3) / 4);
+ display: flex;
+flex-direction: column;
+}
+main .photo img {
+ display: block;
+ width: 100%;
+ flex-grow: 1;
+ object-fit: cover
+}
+main .photo div { 
+    flex-shrink: 0; 
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14pt;
+}
+@container (max-width: 600px) {
+ main .photo {
+ width: calc((100cqw - 10pt) / 2);
+ }
+}
+@container (max-width: 400px) {
+ main .photo { width: 100cqw; }
+}
+

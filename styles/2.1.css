@@ -1,0 +1,316 @@
+@font-face {
+ font-family: 'Caviar Dreams';
+ src: url(../fonts/CaviarDreams.ttf);
+}
+@font-face {
+ font-family: 'Caviar Dreams';
+ src: url(../fonts/CaviarDreams_Bold.ttf);
+ font-weight: bold;
+}
+@font-face {
+ font-family: 'Caviar Dreams';
+ src: url(../fonts/CaviarDreams_Italic.ttf);
+ font-style: italic;
+}
+@font-face {
+ font-family: 'Caviar Dreams';
+ src: url(../fonts/CaviarDreams_BoldItalic.ttf);
+ font-weight: bold;
+ font-style: italic;
+}
+body {
+ font-family: Arial;
+ margin: 0;
+ background-image:repeating-linear-gradient(45deg, white, blanchedalmond 1mm);
+ width: 100vw;
+ height: 100vh;
+}
+p { 
+    font-size: 14pt;
+}
+ul {
+    font-size: 14pt;
+    list-style-type: square;
+}    
+p.greeting {
+    font-size: 24pt;
+}   
+address {
+    text-align: right;
+}
+strong {
+    font-style: italic;
+}
+.advertising {
+    margin-left: 30pt;
+    font-size: 12pt;
+    margin-top: 2pt;
+    margin-bottom: 2pt;
+}
+.time {
+    font-variant-numeric: oldstyle-nums;
+    font-size: larger;
+}
+table.price-list th, table.price-list td {
+ border: grey thin solid;
+ padding: 2pt;
+}
+table.catalog td {
+ border-bottom: black thin dotted;
+ padding: 3pt;
+}
+table.catalog img { 
+    width: 200px;
+ }
+.header{
+    background-color: grey;
+    color: white;
+}
+.subtotal {
+    font-style: italic;        
+    text-align: right;
+}
+nav {
+ background-color: blanchedalmond;
+ width: 200px;
+ padding: 20px;
+ display: table-cell;
+/*
+ grid-area: nav;
+ flex-direction: column;
+ align-items: center;
+ */
+}
+nav div, nav a {
+ font-size: 24pt;
+ margin: 10px 0px;
+}
+main {
+min-height: 600px;
+ display: table-cell;
+ padding-left: 20px;
+}
+table.catalog tr:last-child td {
+ border-bottom: none;
+ display: table-cell;
+
+}
+table.price-list th[colspan=2] 
+{
+ text-align: center;
+}
+table.catalog h3 + p::first-letter {
+ font-size: 150%;
+ background-color: blanchedalmond;
+}
+ul li::marker {
+ font-size: 150%;
+ color: orange;
+}
+.price-list td:last-child:not(:only-child){
+    border: none;
+    background-color:lightgrey;
+}
+td[rowspan]{
+    font-size: larger;
+}
+table.catalog h3 {
+ font-family: 'Caviar Dreams';
+ font-size: 32pt;
+ font-variant-caps: all-small-caps;
+}
+i.icon-drink {
+ content: url(../images/drink.jpg);
+ height: 1em;
+}
+h2 {
+    font-size: 28pt;
+    text-transform: uppercase;
+}
+h3{
+    letter-spacing: 10pt;
+}
+h3::after{
+    content: ":";
+}
+p::first-letter {
+ vertical-align: top;
+}
+header {
+ text-align: right;
+}
+header h1.header1 {
+ font: bold 48pt 'Caviar Dreams';
+ text-transform: uppercase;
+ letter-spacing: 18pt;
+ background:
+ padding-box padding-box url(../images/sushi.jpg)
+ left / auto 80% no-repeat,padding-box padding-box url(../images/rolls.png)
+ 160px / auto 80% no-repeat,
+ radial-gradient(circle farthest-side at right,
+ blanchedalmond, blanchedalmond 67%,
+ white 90%);
+ margin: 0;
+ padding: 12pt 8pt 0 0;
+ border-bottom: 12pt solid salmon;
+}
+header h1.header2 {
+ font: 36pt Verdana;
+ letter-spacing: 8pt;
+ margin: 0;
+ padding: 0 36pt 0 0;
+}
+div.container {
+ background-color: rgba(255, 255, 255, 0.8);
+ min-width: 768px;
+ max-width: 1024px;
+ margin-left: auto;
+ margin-right: auto;
+position: relative;
+height: 100%;
+/*
+display: grid;
+grid-template-columns: 200px 1fr;
+grid-template-rows: auto 1fr auto;
+grid-template-areas: "nav main""nav footer";
+min-height: 100vh;
+margin-top: 100px;
+*/
+}
+footer {
+ text-align: right;
+ 
+}
+footer h1.head3 {
+ font:bold italic 12pt "Caviar Dreams";
+text-transform:uppercase;
+ letter-spacing: 1pt;
+ background-color: blanchedalmond;
+ margin: 0;
+ padding: 10pt 10pt 2pt 1pt;
+ border-bottom: 2px solid salmon;
+}
+footer h1.head4 {
+font-size: 10pt;
+ padding: 0 40pt 0 0;
+}
+.promo-list{
+ list-style-type: upper-roman;
+}
+.promo-list li::marker{
+ color: orange;
+}
+table.catalog tr td:first-child{
+    width: 33%;
+}
+nav a {
+ color: maroon;
+ text-decoration: none;
+ display: block;
+ transition-property: color, background-color, translate;
+ transition-duration: 1.5s, 1.5s, 2s;
+ transition-delay: .5s, .5s, 0
+}
+nav a:active, nav a:hover {
+ color: blanchedalmond;
+ background-color: maroon;
+ translate: 10px;
+ transition-property: color, background-color, translate;
+ transition-duration: 1s;
+}
+img{
+   max-width: 100%;
+   max-height: 100%;
+   object-fit: contain;
+}
+form {
+ width: min-content;
+ padding: 0 10pt;
+ margin-bottom: 10pt;
+ border: thin dotted orange;
+ border-radius: 5pt;
+}
+input, select, textarea {
+ font: 12pt monospace;
+ border: medium solid orange;
+ border-radius: 5pt;
+ padding: 5pt;
+}
+input:required + span::after, select:required + span::after {
+ font: 24pt monospace;
+ content: '*';
+ vertical-align: top;
+}
+input:user-valid, select:user-valid {
+ border-color: green;
+}
+input:user-invalid, select:user-invalid {
+ border-color: red;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1ex;
+    height: 1ex;
+    border: 1px solid orange;
+    vertical-align: middle;
+    cursor: pointer;
+}
+input[type="checkbox"]{
+    border-radius: 0;
+}
+input[type="radio"]{
+    border-radius: 50%;
+}
+input[type="checkbox"]:checked,
+input[type="radio"]:checked{
+    background-color: orange;
+}
+.table {
+ display: table;
+ border-collapse: collapse;
+ width: 100%;
+}
+.row { display: table-row; }
+nav img{
+    width: 100%;
+    max-width: 150px;
+    margin-top: 15px;
+}
+@media screen and (max-width: 400px) {
+header h1.header1 {
+ font: bold 42pt 'Caviar Dreams';
+ letter-spacing: initial;
+ background:
+ radial-gradient(circle farthest-side at right,
+ blanchedalmond, blanchedalmond 67%,
+ white 90%);
+ }
+ header h1.header2 {
+ font: 32pt Verdana;
+ letter-spacing: initial;
+ }
+ nav {
+float: none;
+ width: initial;
+ margin: initial;
+ border-radius: initial;
+ }
+ main {
+ margin-left: initial;
+ min-height: initial;
+ }
+ div.container {
+ min-width: initial;
+ max-width: initial;
+ width: 100vw;
+ background: rgba(255, 255, 255, 0.8);
+ }
+ table.catalog, table.catalog tr, table.catalog tr td {
+ display: block;
+ }
+ table.catalog tr td:first-of-type {
+ width: initial;
+ }
+}
