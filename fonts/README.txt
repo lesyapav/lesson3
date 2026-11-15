@@ -1,0 +1,1 @@
+A geometric sans serif wirh a dastardly angled lowercase letter e, and those w's with those lovely letter lumps. Extreme round overshoot may be disturbing to some viewers. Viewer discretin is advised.
